@@ -1,4 +1,3 @@
-
 # WDD131 - Course - Track BS Software Development
 
 This is a repository to store all assignments, task and learning activities related to this course in order to fulfill requirements and credits towards the bachelor degree.
