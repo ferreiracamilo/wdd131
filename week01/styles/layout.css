@@ -25,6 +25,7 @@ header h3{
 nav{
     background-color: black;
     grid-row: 3/4;
+    text-align: center;
 }
 
 nav a{
