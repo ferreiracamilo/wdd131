@@ -16,6 +16,10 @@ header nav a, footer .copyright, header, main h2{
     color: #fff;
 }
 
+.gold_text{
+    color: gold;
+}
+
 /* ====== */
 /* HEADER */
 /* ====== */
@@ -50,7 +54,7 @@ main{
     padding: 20px;
 }
 
-main h2{
+main h2, main h3{
     margin: 0;
     text-align: center;
 }
@@ -60,14 +64,33 @@ section, aside {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.profile-picture {
-    float: right;
-    margin-left: 20px;
+article {
+    display: flex;
+    align-items: flex-start; /* Alinear elementos al inicio */
+    margin-bottom: 20px; /* Espacio entre los articles */
+    padding: 10px; /* Padding dentro del article */
 }
 
-.country-flag {
-    float: left;
-    margin-right: 20px;
+section article *{
+    padding: 10px;
+}
+
+.article-content {
+    flex: 3; /* Ocupa 3 partes de 4 */
+    padding-right: 10px; /* Espacio entre el párrafo y la imagen */
+}
+
+.article-image {
+    flex: 1; /* Ocupa 1 parte de 4 */
+    text-align: center; /* Centrar la imagen horizontalmente */
+    display: flex;
+    align-items: flex-start; /* Alinear la imagen al inicio */
+}
+
+.article-image img {
+    max-width: 100%; /* La imagen no excede el tamaño del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    align-self: flex-start; /* Alinear la imagen al inicio del contenedor */
 }
 
 aside.web_resources{
