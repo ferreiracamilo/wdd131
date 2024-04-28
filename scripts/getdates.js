@@ -1,27 +1,24 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the current year
+    const currentYear = new Date().getFullYear();
+    // Update the copyright year in the footer's first paragraph
+    const copyrightYearElement = document.querySelector('#copyright-year');
+    copyrightYearElement.textContent = "©"+currentYear;
 
-function getCurrentDateTime(){
-    const now = new Date();
-    const month = (now.getMonth() + 1).toString().padStart(2, '0');
-    const day = now.getDate().toString().padStart(2, '0');
-    const year = now.getFullYear();
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
-    
-    return `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
-}
-  
-function updateLastSavedData() {
-    const lastSavedDataElement = document.getElementById('last_saved_data');
-    if (lastSavedDataElement) {
-        lastSavedDataElement.textContent = getCurrentDateTime();
-    } else {
-        console.error("Element with id 'last_saved_data' not found.");
-    }
-}
-  
-window.addEventListener('DOMContentLoaded', () => {
-    updateLastSavedData();
 
-    document.addEventListener('input', updateLastSavedData);
+    // Get the last modified date of the document
+    const lastModifiedDate = new Date(document.lastModified);
+    // Format the date as a string (e.g., "September 17, 2023")
+    const formattedLastModifiedDate = lastModifiedDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false, // Use AM/PM format
+    });
+    // Update the last modified date in the second paragraph
+    const lastModifiedElement = document.querySelector('#lastModified');
+    lastModifiedElement.textContent = "Last modification: " + formattedLastModifiedDate;
 });
