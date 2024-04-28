@@ -1,0 +1,88 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header, footer, main h2{
+    background-color: #22577A;
+}
+
+header nav a, footer .copyright, header, main h2{
+    color: #fff;
+}
+
+/* ====== */
+/* HEADER */
+/* ====== */
+header{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+header h1{
+    text-align: center;
+}
+
+nav{
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav a{
+    text-decoration: none;
+}
+
+/* ==== */
+/* MAIN */
+/* ==== */
+
+main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+main h2{
+    margin: 0;
+    text-align: center;
+}
+
+section, aside {
+    border-radius: 1px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.profile-picture {
+    float: right;
+    margin-left: 20px;
+}
+
+.country-flag {
+    float: left;
+    margin-right: 20px;
+}
+
+aside.web_resources{
+    display: flex;
+    flex-direction: column;
+}
+
+aside.web_resources ul{
+    margin-block: auto; /* Centering the ul */
+}
+
+/* ====== */
+/* FOOTER */
+/* ====== */
+footer {
+    text-align: center;
+    padding: 10px;
+}
