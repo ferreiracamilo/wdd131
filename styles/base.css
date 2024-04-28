@@ -64,11 +64,16 @@ section, aside {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+.underline{
+    border-bottom: 1px solid #999;
+    margin-inline: 10%;
+}
+
 article {
     display: flex;
-    align-items: flex-start; /* Alinear elementos al inicio */
-    margin-bottom: 20px; /* Espacio entre los articles */
-    padding: 10px; /* Padding dentro del article */
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 section article *{
@@ -76,21 +81,21 @@ section article *{
 }
 
 .article-content {
-    flex: 3; /* Ocupa 3 partes de 4 */
-    padding-right: 10px; /* Espacio entre el párrafo y la imagen */
+    flex: 3;
+    padding-right: 10px;
 }
 
 .article-image {
-    flex: 1; /* Ocupa 1 parte de 4 */
-    text-align: center; /* Centrar la imagen horizontalmente */
+    flex: 1;
+    text-align: center;
     display: flex;
-    align-items: flex-start; /* Alinear la imagen al inicio */
+    align-items: flex-start;
 }
 
 .article-image img {
-    max-width: 100%; /* La imagen no excede el tamaño del contenedor */
-    height: auto; /* Mantiene la proporción de aspecto */
-    align-self: flex-start; /* Alinear la imagen al inicio del contenedor */
+    max-width: 100%;
+    height: auto;
+    align-self: flex-start;
 }
 
 aside.web_resources{
