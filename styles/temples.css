@@ -71,7 +71,6 @@ ul.navigation{
 }
 
 .navigation li a:hover{
-	background-color: var(--accent2-color);
 	font-weight: 700; /* strength the font to highlight the option hovered */
 }
 
@@ -79,7 +78,7 @@ ul.navigation{
 .open li{
 	display: block;
 	width: 100%;
-    font-size: 2.125rem;
+    font-size: 2.125rem; /* increase size only when open class was added to the nav */
 }
 
 .open li a{
@@ -87,7 +86,7 @@ ul.navigation{
 }
 
 .open div{
-    display: none;
+    display: none; /* hide title from header when menu is opened */
 }
 
 #dynamic-title-container.open {
