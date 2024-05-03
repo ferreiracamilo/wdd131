@@ -55,6 +55,10 @@ header nav a{
 	list-style: none;
 }
 
+ul.navigation{
+    margin: 0;
+}
+
 .navigation li{
 	display: none;
 }
