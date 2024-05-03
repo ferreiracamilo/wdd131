@@ -17,6 +17,23 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 0.1em;
     }
+
+
+    /*** NAV RULES FOR BIG SIZE SCREEN ***/
+    #menu {
+        display: none; /* hide hamburger button */
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    
 }
 
 
