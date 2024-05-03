@@ -1,11 +1,28 @@
 /************************************************************
 *
-*               GENERAL MAIN
+*               GENERAL APPLICATION
+*
+************************************************************/
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/************************************************************
+*
+*               MAIN & UNDER MAIN
 *
 ************************************************************/
 
 main h2{
     text-align: center;
+}
+
+main div{
+    justify-content: center;
 }
 
 /************************************************************
@@ -28,6 +45,12 @@ main h2{
     text-align: center;
 }
 
+/* Footer styles */
+header, footer, main h2{
+    background-color: #22577A;
+}
 
-
-
+footer {
+    text-align: center;
+    padding: 10px;
+}
