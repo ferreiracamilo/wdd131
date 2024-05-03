@@ -1,0 +1,25 @@
+
+/************************************************************
+*
+*               TEMPLES
+*
+************************************************************/
+
+.grid-temples{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
+.temple-card {
+    margin: auto;
+}
+
+.temple-card p{
+    text-align: center;
+}
+/*endregion pet card*/
+
+
+
+
