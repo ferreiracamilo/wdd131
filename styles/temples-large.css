@@ -1,4 +1,3 @@
-
 /************************************************************
 *
 *               MEDIA SCREEN
@@ -18,6 +17,12 @@
         gap: 0.1em;
     }
 
+    /* Flex container for header */
+    header {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        justify-content: space-between; /* Space between items */
+    }
 
     /*** NAV RULES FOR BIG SIZE SCREEN ***/
     #menu {
@@ -32,8 +37,4 @@
         display: block;
         flex: 1 1 100%;
     }
-
-    
 }
-
-
