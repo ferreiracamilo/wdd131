@@ -1,13 +1,22 @@
+
 /************************************************************
 *
-*               TEMPLES
+*               MEDIA SCREEN
 *
 ************************************************************/
 
-.grid-temples{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.1em;
+@media screen and (min-width: 900px) {
+    /************************************************************
+    *
+    *               TEMPLES
+    *
+    ************************************************************/
+
+    .grid-temples{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.1em;
+    }
 }
 
-/*endregion pet card*/
+
