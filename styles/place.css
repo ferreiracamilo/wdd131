@@ -19,6 +19,7 @@ main {
     position: relative;
     margin: 0;
     padding-top: 20px;
+    padding-bottom: 0px;
     border: 0;
 }
 
@@ -32,7 +33,7 @@ main img{
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     position: absolute;
-    top: 40px; /* Adjust top positioning */
+    top: 60px; /* Adjust top positioning */
     left: 20px; /* Adjust left positioning */
 }
 
@@ -41,6 +42,6 @@ main img{
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     position: absolute;
-    bottom: 20px; /* Adjust bottom positioning */
+    bottom: 40px; /* Adjust bottom positioning */
     right: 20px; /* Adjust right positioning */
 }
