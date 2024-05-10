@@ -3,8 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    position: relative;
-    background-color: black;
+    background-color: green;
 }
 
 header, footer {
@@ -12,6 +11,7 @@ header, footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+    width: 100%;
 }
 
 main {
@@ -44,4 +44,23 @@ main img{
     position: absolute;
     bottom: 40px; /* Adjust bottom positioning */
     right: 20px; /* Adjust right positioning */
+}
+
+@media all and (max-width: 800px){
+    .data-box,
+    .weather-box {
+        position: static; /* Cambiamos la posición a estática para que se muestren uno debajo del otro */
+        width: 100%;
+        border: 0px;
+        box-shadow: none;
+    }
+
+    .data-box{
+        margin-top: 0px;
+    }
+
+    .weather-box {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
