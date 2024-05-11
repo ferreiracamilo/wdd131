@@ -44,7 +44,6 @@ article ul{
 
 article h2{
     padding: 10px;
-    padding-inline: 20px;
     background-color: green;
     margin: 0;
 }
@@ -67,10 +66,15 @@ article h2{
     right: 20px; /* Adjust right positioning */
 }
 
-@media all and (max-width: 800px){
+@media (max-width: 800px) {
 
     article{
         opacity: 1;
+    }
+
+    article h2{
+        padding: 0px;
+        background-color: transparent;
     }
 
     .data-box,
