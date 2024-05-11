@@ -28,6 +28,16 @@ main img{
     height:100%;
 }
 
+article ul, article h2{
+    text-align: center;
+}
+
+article ul{
+    padding:0;
+    text-decoration:none;
+    list-style-type: none;
+}
+
 .data-box {
     background-color: #f2f2f2;
     padding: 20px;
@@ -49,8 +59,7 @@ main img{
 @media all and (max-width: 800px){
     .data-box,
     .weather-box {
-        position: static; /* Cambiamos la posición a estática para que se muestren uno debajo del otro */
-        width: 100%;
+        position: static;
         border: 0px;
         box-shadow: none;
     }
