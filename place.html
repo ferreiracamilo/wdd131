@@ -31,10 +31,10 @@
         <article class="weather-box">
             <h2>Weather</h2>
             <ul>
-                <li>Temperature: 11°C</li>
+                <li>Temperature: <span id="tempData">11</span>°C</li>
                 <li>Conditions: Partly Cloudy</li>
-                <li>Wind: 7.2 km/h</li>
-                <li>Wind Chill: 9.8°C</li>
+                <li>Wind: <span id="windSpeedData">7.2</span> km/h</li>
+                <li>Wind Chill: <span id="windChillData"></span></li>
             </ul>
         </article>
     </main>
@@ -43,5 +43,6 @@
         <p class="gold_text">Last Modification: <span id="lastModified"></span></p>
     </footer>
     <script src="scripts/getdates.js"></script>
+    <script src="scripts/places.js"></script>
 </body>
 </html>
