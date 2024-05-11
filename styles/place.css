@@ -3,19 +3,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: green;
+    background-color: goldenrod;
 }
 
 header, footer {
-    background-color: red;
-    color: #fff;
+    background-color: skyblue;
+    color: black;
     padding-block: 20px;
     text-align: center;
     width: 100%;
 }
 
 main {
-    background-color: green;
+    background-color: goldenrod;
     position: relative;
     margin: 0;
     padding-top: 20px;
@@ -44,7 +44,7 @@ article ul{
 
 article h2{
     padding: 10px;
-    background-color: green;
+    background-color: skyblue;
     margin: 0;
 }
 
