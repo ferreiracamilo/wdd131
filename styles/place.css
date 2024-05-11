@@ -28,6 +28,10 @@ main img{
     height:100%;
 }
 
+article{
+    opacity: 0.8;
+}
+
 article ul, article h2{
     text-align: center;
 }
@@ -64,6 +68,11 @@ article h2{
 }
 
 @media all and (max-width: 800px){
+
+    article{
+        opacity: 1;
+    }
+
     .data-box,
     .weather-box {
         position: static;
