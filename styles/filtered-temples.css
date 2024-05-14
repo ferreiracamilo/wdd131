@@ -1,0 +1,153 @@
+/************************************************************
+*
+*               GENERAL APPLICATION
+*
+************************************************************/
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer styles */
+header, footer{
+    background-color: #22577A;
+}
+
+/************************************************************
+*
+*               HEADER & NAVIGATION
+*
+************************************************************/
+
+header {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+header nav a{
+    text-decoration: none;
+    color: white; 
+}
+
+#menu{
+	background-color: #22577A;
+	color: white;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before{
+	content: "☰";
+}
+
+#menu.open::before{
+	content: "X";
+}
+
+.navigation{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+}
+
+ul.navigation{
+    margin: 0;
+}
+
+.navigation li{
+	display: none;
+}
+
+.navigation li a{
+	display: block;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+}
+
+.navigation li a:hover{
+	font-weight: 700; /* strength the font to highlight the option hovered */
+}
+
+/* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
+.open li{
+	display: block;
+	width: 100%;
+    font-size: 2.125rem; /* increase size only when open class was added to the nav */
+}
+
+.open li a{
+	display: block;
+}
+
+.open div{
+    display: none; /* hide title from header when menu is opened */
+}
+
+#dynamic-title-container.open {
+    display: none;
+}
+
+
+/************************************************************
+*
+*               Nav
+*
+************************************************************/
+nav ul {
+    display: flex;
+}
+nav ul li {
+    flex: 1 1 100%;
+}
+
+/************************************************************
+*
+*               MAIN & UNDER MAIN
+*
+************************************************************/
+
+main h2{
+    text-align: center;
+}
+
+main div{
+    justify-content: center;
+}
+
+/************************************************************
+*
+*               TEMPLES GRID & ARTICLES
+*
+************************************************************/
+
+.grid-temples{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
+.temple-card {
+    margin: auto;
+}
+
+.temple-card p{
+    text-align: center;
+}
+
+/************************************************************
+*
+*               FOOTER
+*
+************************************************************/
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
