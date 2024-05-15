@@ -14,7 +14,7 @@
     .grid-temples{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0.1em;
+        gap: 2em;
     }
 
     /* Flex container for header */

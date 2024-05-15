@@ -129,11 +129,16 @@ main div{
 .grid-temples{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
+    gap: 20px;
 }
 
+/*#region pet card*/
 .temple-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: auto;
+    text-align: center;
+    font-family: arial;
+    padding: 20px;
 }
 
 .temple-card p{
