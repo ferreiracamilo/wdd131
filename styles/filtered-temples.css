@@ -149,6 +149,10 @@ main div{
     margin: auto;
 }
 
+span.label{
+    color:blueviolet;
+}
+
 /************************************************************
 *
 *               FOOTER
