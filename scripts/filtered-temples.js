@@ -205,11 +205,17 @@ homeFilterLink.addEventListener("click", () => {
 })
 
 oldFilterLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => !temple.location.includes("Utah")));
+    createTempleCard(temples.filter(temple => {
+        let year = parseInt(temple.dedicated.split(", ")[0]); //Split the text to keep only the year
+        return year < 1900; // Filter based on the target year and math expression you prefer
+    }));
 })
 
 newFilterLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => !temple.location.includes("Utah")));
+    createTempleCard(temples.filter(temple => {
+        let year = parseInt(temple.dedicated.split(", ")[0]); //Split the text to keep only the year
+        return year > 2000; // Filter based on the target year and math expression you prefer
+    }));
 })
 
 largeFilterLink.addEventListener("click", () => {
@@ -219,4 +225,3 @@ largeFilterLink.addEventListener("click", () => {
 smallFilterLink.addEventListener("click", () => {
     createTempleCard(temples.filter(temple => temple.area.valueOf() < 10000));
 })
-
