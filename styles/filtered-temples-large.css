@@ -1,0 +1,40 @@
+/************************************************************
+*
+*               MEDIA SCREEN
+*
+************************************************************/
+
+@media screen and (min-width: 900px) {
+    /************************************************************
+    *
+    *               TEMPLES
+    *
+    ************************************************************/
+
+    .grid-temples{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.1em;
+    }
+
+    /* Flex container for header */
+    header {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        justify-content: space-between; /* Space between items */
+    }
+
+    /*** NAV RULES FOR BIG SIZE SCREEN ***/
+    #menu {
+        display: none; /* hide hamburger button */
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+}
