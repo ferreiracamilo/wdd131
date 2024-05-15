@@ -200,7 +200,23 @@ const newFilterLink = document.querySelector("#newFilter");
 const largeFilterLink = document.querySelector("#largeFilter");
 const smallFilterLink = document.querySelector("#smallFilter");
 
+homeFilterLink.addEventListener("click", () => {
+    createTempleCard(temples);
+})
+
 oldFilterLink.addEventListener("click", () => {
     createTempleCard(temples.filter(temple => !temple.location.includes("Utah")));
+})
+
+newFilterLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => !temple.location.includes("Utah")));
+})
+
+largeFilterLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area.valueOf() > 90000));
+})
+
+smallFilterLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area.valueOf() < 10000));
 })
 
