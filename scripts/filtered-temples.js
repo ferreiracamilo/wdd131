@@ -180,13 +180,22 @@ function createTempleCard(){
         let area = document.createElement("p");
         let img = document.createElement("img");
 
+        card.setAttribute("class","temple-card");
         name.textContent = temple.templeName;
         location.innerHTML = `<p><span class="label">Location:</span> ${temple.location}</p>`;
         dedication.innerHTML = `<p><span class="label">Dedicated:</span> ${temple.dedicated}</p>`;
         area.innerHTML = `<p><span class="label">Size:</span> ${temple.area} sq ft</p>`;
         img.setAttribute("src", temple.imageUrl);
-        img.setAttribute("alt", `${temple.templeName} Temple`)
+        img.setAttribute("alt", `${temple.templeName} Temple`);
+        img.setAttribute("loading", "lazy");
+
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedication);
+        card.appendChild(area);
+        card.appendChild(img);
         
+        document.querySelector(".grid-temples").appendChild(card);
         
         
         
