@@ -58,7 +58,7 @@ const temples = [
 
 
     {
-        templeName: "Salt Lake Temple",
+        templeName: "Salt Lake",
         location: "Salt Lake, Utah, United States",
         dedicated: "1983, April, 24",
         area: 382207,
@@ -66,7 +66,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
     },
     {
-        templeName: "Los Angeles California Temple",
+        templeName: "Los Angeles California",
         location: "Los Angeles, California, United States",
         dedicated: "1956, March, 14",
         area: 190614,
@@ -74,7 +74,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/los-angeles-california-temple/los-angeles-california-temple-38945-main.jpg"
     },
     {
-        templeName: "Washington D.C. Temple",
+        templeName: "Washington D.C.",
         location: "Kensington, Maryland, United States",
         dedicated: "1974, November, 22",
         area: 156558,
@@ -82,7 +82,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/washington-d.c.-temple/washington-d.c.-temple-14992-main.jpg"
     },
     {
-        templeName: "Jordan River Utah Temple",
+        templeName: "Jordan River Utah",
         location: "South Jordan, Utah, United States",
         dedicated: "1981, November, 20",
         area: 148236,
@@ -90,7 +90,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/jordan-river-utah-temple/jordan-river-utah-temple-40086-main.jpg"
     },
     {
-        templeName: "St. George Utah Temple",
+        templeName: "St. George Utah",
         location: "St. George, Utah, United States",
         dedicated: "1877, April, 8",
         area: 143969,
@@ -98,7 +98,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/st.-george-utah-temple/st.-george-utah-temple-40892-main.jpg"
     },
     {
-        templeName: "Logan Utah Temple",
+        templeName: "Logan Utah",
         location: "Logan, Utah, United States",
         dedicated: "1884, May, 19",
         area: 119619,
@@ -106,7 +106,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/logan-utah-temple/logan-utah-temple-40550-main.jpg"
     },
     {
-        templeName: "Colonia Juárez Chihuahua Mexico Temple",
+        templeName: "Colonia Juárez Chihuahua Mexico",
         location: "Colonia Juárez, Chihuahua, Mexico",
         dedicated: "1999, March, 7",
         area: 6800,
@@ -114,7 +114,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/colonia-juarez-chihuahua-mexico-temple/colonia-juarez-chihuahua-mexico-temple-1601-main.jpg"
     },
     {
-        templeName: "Yigo Guam Temple",
+        templeName: "Yigo Guam",
         location: "Rte 1, Yigo  96929,Guam",
         dedicated: "2022, May, 22",
         area: 6861,
@@ -122,7 +122,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/yigo-guam-temple/yigo-guam-temple-26495-main.jpg"
     },
     {
-        templeName: "San Juan Puerto Rico Temple",
+        templeName: "San Juan Puerto Rico",
         location: "San Juan, PR  00926",
         dedicated: "2023, January, 15",
         area: 6988,
@@ -130,7 +130,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/san-juan-puerto-rico-temple/san-juan-puerto-rico-temple-48152-main.jpg"
     },
     {
-        templeName: "Praia Cape Verde Temple",
+        templeName: "Praia Cape Verde",
         location: "Praia, Santiago, Cape Verde",
         dedicated: "2022, June, 15",
         area: 8759,
@@ -138,7 +138,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/praia-cape-verde-temple/praia-cape-verde-temple-27204-main.jpg"
     },
     {
-        templeName: "Cobán Guatemala Temple",
+        templeName: "Cobán Guatemala",
         location: "Barrio Bella Vista, Cobán, Alta Verapaz, Guatemala",
         dedicated: "2024, June, 9",
         area: 8800,
@@ -146,7 +146,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/coban-guatemala-temple/coban-guatemala-temple-46348-main.jpg"
     },
     {
-        templeName: "San Luis Potosí Mexico Temple",
+        templeName: "San Luis Potosí Mexico",
         location: "San Luis Potosí, San Luis Potosí",
         dedicated: "2024, March, 9",
         area: 9300,
@@ -154,7 +154,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/san-luis-potosi-mexico-temple/san-luis-potosi-mexico-temple-44841-main.jpg"
     },
     {
-        templeName: "Port Moresby Papua New Guinea Temple",
+        templeName: "Port Moresby Papua New Guinea",
         location: "Badili, Port Moresby, Papua New Guinea",
         dedicated: "2023, April, 22",
         area: 9550,
@@ -164,6 +164,14 @@ const temples = [
 ];
 
 function createTempleCard(){
+    /*
+        templeName: string;
+        location: string;
+        dedicated: string;
+        area: number;
+        imageUrl: string; 
+    */
+    
     temples.forEach(temple =>{
         let card = document.createElement("article");
         let name = document.createElement("h1");
@@ -172,13 +180,16 @@ function createTempleCard(){
         let area = document.createElement("p");
         let img = document.createElement("img");
 
-
-    /*
-        templeName: string;
-        location: string;
-        dedicated: string;
-        area: number;
-        imageUrl: string; 
-    */
+        name.textContent = temple.templeName;
+        location.innerHTML = `<p><span class="label">Location:</span> ${temple.location}</p>`;
+        dedication.innerHTML = `<p><span class="label">Dedicated:</span> ${temple.dedicated}</p>`;
+        area.innerHTML = `<p><span class="label">Size:</span> ${temple.area} sq ft</p>`;
+        img.setAttribute("src", temple.imageUrl);
+        img.setAttribute("alt", `${temple.templeName} Temple`)
+        
+        
+        
+        
+    
     });
 }
