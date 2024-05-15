@@ -53,14 +53,19 @@ hr {
   margin: 35px 0;
   background: var(--accent1-color);
 }
-header {
+header, footer {
   padding: 1em;
   text-align: center;
   color: var(--headline-color-on-color);
   background-color: var(--paragraph-background-color);
 }
-header > h1, header > h2 {
+
+header > h1, header > h2, footer p {
   color: var(--headline-color-on-color);
+}
+
+footer{
+  margin-top: 2em;
 }
 
 p {
