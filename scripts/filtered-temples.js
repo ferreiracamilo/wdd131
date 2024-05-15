@@ -163,16 +163,9 @@ const temples = [
     }
 ];
 
-function createTempleCard(){
-    /*
-        templeName: string;
-        location: string;
-        dedicated: string;
-        area: number;
-        imageUrl: string; 
-    */
-    
-    temples.forEach(temple =>{
+function createTempleCard(filteredTemples){
+    document.querySelector(".grid-temples").innerHTML = "";
+    filteredTemples.forEach(temple =>{
         let card = document.createElement("article");
         let name = document.createElement("h1");
         let location = document.createElement("p");
@@ -196,9 +189,18 @@ function createTempleCard(){
         card.appendChild(img);
         
         document.querySelector(".grid-temples").appendChild(card);
-        
-        
-        
-    
     });
 }
+
+createTempleCard(temples);
+
+const homeFilterLink = document.querySelector("#homeFilter");
+const oldFilterLink = document.querySelector("#oldFilter");
+const newFilterLink = document.querySelector("#newFilter");
+const largeFilterLink = document.querySelector("#largeFilter");
+const smallFilterLink = document.querySelector("#smallFilter");
+
+oldFilterLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => !temple.location.includes("Utah")));
+})
+
