@@ -12,15 +12,20 @@
     ************************************************************/
 
     .grid-temples {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
+        display: grid;
+        margin: 20px;
+        align-items: stretch; /* Align vertically the temple cards */
     }
 
-    .temple-card{
-        margin-bottom: 0;
+    .temple-card {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0; /* Erase margin applied in mobile */
     }
 
+    /*** MOBILE HEADER ***/
     /* Flex container for header */
     header {
         display: flex;
