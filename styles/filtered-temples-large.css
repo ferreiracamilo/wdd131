@@ -11,10 +11,10 @@
     *
     ************************************************************/
 
-    .grid-temples{
+    .grid-temples {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2em;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
     }
 
     /* Flex container for header */
