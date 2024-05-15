@@ -140,6 +140,7 @@ main div{
     max-width: 100%; /* Assure width won't exceed container */
     box-sizing: border-box; /* Include padding into width */
     background-color: rgb(204, 202, 202);
+    margin-bottom: 20px;
 }
 
 .temple-card img{

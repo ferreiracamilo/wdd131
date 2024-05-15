@@ -17,6 +17,10 @@
         gap: 20px;
     }
 
+    .temple-card{
+        margin-bottom: 0;
+    }
+
     /* Flex container for header */
     header {
         display: flex;
