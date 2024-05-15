@@ -163,3 +163,22 @@ const temples = [
     }
 ];
 
+function createTempleCard(){
+    temples.forEach(temple =>{
+        let card = document.createElement("article");
+        let name = document.createElement("h1");
+        let location = document.createElement("p");
+        let dedication = document.createElement("p");
+        let area = document.createElement("p");
+        let img = document.createElement("img");
+
+
+    /*
+        templeName: string;
+        location: string;
+        dedicated: string;
+        area: number;
+        imageUrl: string; 
+    */
+    });
+}
