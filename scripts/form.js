@@ -26,29 +26,46 @@ const products = [
   }
 ];
 
+/** 
+ * Load products into dropdown/picklist
+ * **/ 
 const productSelect = document.getElementById('product-select');
 
 products.forEach(product => {
-    const option = document.createElement('option');
-    option.value = product.name;
-    option.textContent = product.name;
-    productSelect.appendChild(option);
+  const option = document.createElement('option');
+  option.value = product.name;
+  option.textContent = product.name;
+  productSelect.appendChild(option);
 });
 
-window.addEventListener('load', () => {
-    const reviewCount = localStorage.getItem('reviewCount') || 0;
-    localStorage.setItem('reviewCount', parseInt(reviewCount) + 1);
-});
+/** 
+ * Load local storage
+ * **/ 
+// Initialize display element variable in review page
+const visitsDisplay = document.querySelector(".visits");
 
-// Form validation
+// Get the stored VALUE for the numVisits-ls KEY in localStorage if it exists. If the numVisits KEY is missing, then assign 0 to the numVisits variable.
+let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+
+/** 
+ * Additional Form validation
+ * **/ 
 const form = document.getElementById('review-form');
 
 form.addEventListener('submit', (e) => {
-    const featuresChecked = document.querySelectorAll('.features input[type="checkbox"]:checked');
+  const featuresChecked = document.querySelectorAll('.features input[type="checkbox"]:checked');
 
-    if (featuresChecked.length === 0) {
-        e.preventDefault();
-        alert('Please select at least one feature.');
-        return;
-    }
+  if (featuresChecked.length === 0) {
+    e.preventDefault();
+    alert('Please select at least one feature.');
+    return;
+  }
+
+  // If the form passes validation, update the local storage count
+  let reviewCount = localStorage.getItem('reviewCount') || 0;
+  reviewCount = parseInt(reviewCount) + 1;
+  localStorage.setItem('reviewCount', reviewCount);
 });
+
+// Update visits display (if needed)
+// visitsDisplay.textContent = `Visits: ${numVisits}`;
