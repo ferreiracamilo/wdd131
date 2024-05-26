@@ -39,15 +39,6 @@ products.forEach(product => {
 });
 
 /** 
- * Load local storage
- * **/ 
-// Initialize display element variable in review page
-const visitsDisplay = document.querySelector(".visits");
-
-// Get the stored VALUE for the numVisits-ls KEY in localStorage if it exists. If the numVisits KEY is missing, then assign 0 to the numVisits variable.
-let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
-
-/** 
  * Additional Form validation
  * **/ 
 const form = document.getElementById('review-form');
@@ -66,6 +57,3 @@ form.addEventListener('submit', (e) => {
   reviewCount = parseInt(reviewCount) + 1;
   localStorage.setItem('reviewCount', reviewCount);
 });
-
-// Update visits display (if needed)
-// visitsDisplay.textContent = `Visits: ${numVisits}`;
