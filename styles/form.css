@@ -79,6 +79,10 @@ button[type="submit"] {
     font-size: 16px;
 }
 
+.review{
+    text-align: center;
+}
+
 footer {
     background-color: #f2f2f2;
     padding: 20px;
