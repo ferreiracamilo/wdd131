@@ -5,6 +5,6 @@
 const reviewsDisplay = document.querySelector(".reviews");
 
 // Get the stored VALUE for the numreviews-ls KEY in localStorage if it exists. If the numreviews KEY is missing, then assign 0 to the numreviews variable.
-let numreviews = Number(window.localStorage.getItem("numreviews-ls")) || 0;
+let numreviews = Number(window.localStorage.getItem("reviewCount"));
 
 reviewsDisplay.textContent = numreviews;
