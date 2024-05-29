@@ -1,4 +1,4 @@
-const temples = [
+const pets = [
     {
         imageurl: "images/Optimized/lost-pets-images/lost-pet-1.jpg",
         name: "Preston",
@@ -96,3 +96,39 @@ const temples = [
         telephone: 5056447252
     }
 ];
+
+function createPetCard(pets){
+    document.querySelector(".grid-pets").innerHTML = "";
+    pets.forEach(pet => {
+        let card = document.createElement("article");
+        let image = document.createElement("img");
+        let name = document.createElement("h1");
+        let age = document.createElement("p");
+        let animal = document.createElement("p");
+        let status = document.createElement("p");
+        let contact = document.createElement("a");
+
+        card.setAttribute("class","pet-card");
+        image.setAttribute("src",pet.imageurl);
+        image.setAttribute("alt",`${pet.name} ${pet.status} ${pet.animal}`);
+        image.setAttribute("loading","lazy");
+        name.textContent = pet.name;
+        age.textContent = `Age: ${pet.age}`;
+        animal.textContent = `Animal: ${pet.animal}`;
+        status.textContent = `Status: ${pet.status}`;
+        contact.setAttribute("class","pet-contact-button");
+        contact.setAttribute("href",`tel:${pet.telephone}`);
+        contact.textContent = "Contact";
+
+        card.appendChild(image);
+        card.appendChild(name);
+        card.appendChild(age);
+        card.appendChild(animal);
+        card.appendChild(status);
+        card.appendChild(contact);
+
+        document.querySelector(".grid-pets").appendChild(card);
+    });
+}
+
+createPetCard(pets);
