@@ -12,5 +12,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     // Update the last modified date in the second paragraph
     const lastModifiedElement = document.querySelector('#lastModified');
-    lastModifiedElement.textContent = "Last modification: " + formattedLastModifiedDate;
+    lastModifiedElement.textContent = formattedLastModifiedDate;
 });
