@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Print this value into footer
         let visitQtyElement = document.getElementById('visitQty');
         if (visitQtyElement) {
-            visitQtyElement.textContent = `You visited ${currentVisitCount} time/s`;
+            visitQtyElement.textContent = `${currentVisitCount}`;
         }
     }
 });
