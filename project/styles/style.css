@@ -404,6 +404,10 @@ main section img {
 .pet-card a{
     color: white;
 }
+
+article.pet-card > img{
+    width:100%;
+}
 /*endregion pet card*/
 
 /************************************************************
