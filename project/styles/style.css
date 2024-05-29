@@ -646,28 +646,52 @@ form button:hover {
 @media screen and (max-width: 900px) {
     header,
     nav {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center elements within nav*/
+        text-align: center;
+        width: 100%;
     }
-  
+
     #logo_link {
-      background-color: unset;
-      width: auto;
+        background-color: unset;
+        width: auto;
     }
 
     nav,
     footer {
-      flex-direction: column;
+        flex-direction: column;
+        width: 100%;
     }
-  
+
     nav a {
-      display: block;
-      padding: 15px;
+        display: block;
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        overflow: hidden; /* effect for background*/
+    }
+
+    nav a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1); /* effect color */
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav a:hover::before {
+        transform: scaleX(1);
     }
 
     footer {
-      margin-top: 25px;
+        margin-top: 25px;
     }
 
     .grid-pets{
@@ -697,7 +721,6 @@ form button:hover {
     }
     
     input[type='text'], input[type='email'], textarea {
-        /* Uniform text field size */
         width: 300px;
     }
 }
