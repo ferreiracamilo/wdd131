@@ -44,24 +44,24 @@
                     <form id="myForm" onsubmit="openModal()">
 
                         <div>
-                            <label for="fname">Name:</label>
+                            <label for="fname">*Name:</label>
                             <input id="fname" name="fname" type="text" required>
                         </div>
                         <div>
-                            <label for="flname">Last name:</label>
+                            <label for="flname">*Last name:</label>
                             <input id="flname" name="flname" type="text" required>
                         </div>
                         <div>
-                            <label for="femail">Email Address:</label>
+                            <label for="femail">*Email Address:</label>
                             <input id="femail" name="femail" type="email" required>
                         </div>
                         <div>
-                            <label>Is your pet lost?:</label><br>
+                            <label>*Is your pet lost?:</label><br>
                             <input type="radio" id="yes" name="fstatus" value="yes" required> <label class="forcss">Yes</label>
                             <input type="radio" id="no" name="fstatus" value="no" required> <label class="forcss">No</label>
                         </div>
                         <div>
-                            <label for="fsubject">Subject:</label>
+                            <label for="fsubject">*Subject:</label>
                             <textarea id="fsubject" name="fsubject" required></textarea>
                         </div>
                         <div>
@@ -149,28 +149,8 @@
         </footer>
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/countVisits.js" defer></script>
+        <script src="scripts/formaction.js" defer></script>
         <!-- PERMANENT STRUCTURE -->
     </div>
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-            
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-        
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        
-        function openModal() {
-            modal.style.display = "block";
-            event.preventDefault();
-        }
-
-        function closeModal(){
-            location.reload(); //Doing a mimic that a form has been sent and reloading the page
-        }
-    </script>
-
 </body>
 </html>
